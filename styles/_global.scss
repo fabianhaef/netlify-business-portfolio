@@ -1,0 +1,128 @@
+
+//// Default stylings
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: $font-stack;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  // font-family: ;
+
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  margin-top: 0px;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+button, .button {
+  // background: ;
+  // color: ;
+  // font-size: ;
+  // font-weight: ;
+  // padding: ;
+  // border-radius: ;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  // transition: ;
+
+  // &:hover {
+
+  // }  
+}
+
+ul {
+  list-style: none;
+}
+
+
+
+
+//// Flexbox
+
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+
+
+
+//// Helper classes
+
+
+// Visibility
+
+// .hide-for-mobile {
+//   // Hide for tablet and mobile devices
+// }
+
+// .hide-for-desktop {
+//   // Hie for Desktops
+// }
+
+
+// Spacing
+
+// .container {
+//   // max-width: ;
+//   // margin: 0 auto;
+
+//   &--pall {
+//     // padding-top: ;
+//     // padding-right: ;
+//     // padding-bottom: ;
+//     // padding-left: ;
+//   }
+//   &--py {
+//     // padding-top: ;
+//     // padding-bottom: ;
+//   }
+//   &--px {
+//     // padding-right: ;
+//     // padding-left: ;
+//   }
+//   &--pt {
+//     // padding-top: ;
+//   }
+//   &--pr {
+//     // padding-right: ;
+//   }
+//   &--pb {
+//     // padding-bottom: ;
+//   }
+//   &--pl {
+//     // padding-left: ;
+//   }
+// }
+
+

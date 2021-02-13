@@ -1,0 +1,154 @@
+section#service {
+  text-align: center;
+  padding: 50px 0;
+  padding-top: 100px;
+
+  h2 {
+    font-size: 3rem;
+
+    @media screen and (max-width: 580px){
+      font-size: 2.5rem;
+    }
+  }
+
+  .cards-container {
+    position: relative;
+    width: 75%;  
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding-bottom: 100px;
+
+    @media screen and (max-width: 1600px){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      height: auto;
+      padding-bottom: 0;
+    }
+
+    @media screen and (max-width: 670px){
+      width: 90%;
+    }
+
+    .card {
+      background: $main-clr;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 520px;
+      height: 520px;
+      padding: 30px 40px;
+      border-radius: 50%;
+      box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.6);
+      transition: 0.25s;
+
+      @media screen and (max-width: 1600px){
+        border-radius: 30px;
+        width: 100%;
+        height: auto;
+        padding: 40px 50px;
+        
+        &:not(:last-child){
+          margin-bottom: 40px;
+        }
+      }
+
+      @media screen and (max-width: 770px){
+        padding: 40px 20px;
+      }
+
+      &:hover, &:active, &:focus {
+        transform: scale(1.05);
+        z-index: 2;
+      }
+
+      h3 {
+        font-size: 2rem;
+
+        @media screen and (max-width: 580px){
+          font-size: 1.5rem;
+        }
+      }
+
+      p {
+        margin: 40px auto;
+        font-size: 1.5rem;
+
+        @media screen and (max-width: 580px){
+          font-size: 1.2rem;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        cursor: pointer;
+        color: white;
+        background: transparent;
+        padding: 10px;
+        font-size: 1.3rem;
+        border: 1px solid white;
+        border-radius: 10px;
+        transition: all 0.25s;
+
+        @media screen and (max-width: 580px){
+          font-size: 1.1rem;
+        }
+
+        &:hover {
+          color: $main-clr;
+          background: white;
+        }
+
+        &:active {
+          opacity: 0.2;
+        }
+      }
+
+      .btn-contact {
+        background: white;
+        color: $main-clr;
+        margin-left: 20px;
+
+        &:hover {
+          background: var(--main-clr);
+          color: white;
+        }
+      }
+    }
+
+    .card1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      @media screen and (max-width: 1600px){
+        position: static;
+      }
+    }
+
+    .card2 {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: calc(50% - (520px/2));
+
+      @media screen and (max-width: 1600px){
+        position: static;
+      }
+    }
+
+    .card3 {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      @media screen and (max-width: 1600px){
+        position: static;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+section.project-screen {
+  padding-top: 80px;
+
+  .bg-screen {
+    position: relative;
+
+    > img {
+      width: 100%;
+      display: block;
+
+      @media screen and (max-width: 1150px){
+        visibility: hidden;
+      }
+    }
+
+    .screens-container {
+      width: 54.1%;
+      height: 46.6%;
+      position: absolute;
+      top: 15.7%;
+      left: 21.2%;
+
+      @media screen and (max-width: 1150px){
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .screen-slides {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          color: white;
+          font-size: 1.5rem;
+          padding: 10px;
+          background-color: rgba(0, 0, 0, 0.4);
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          transition: background-color 0.5s;
+
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+          }
+        }
+
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        .screen {
+          width: 100%;
+          height: 100%;
+          display: none;
+          opacity: 1;
+          background: black;
+
+          &.active {
+            display: block;
+          }
+
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+
+            &.fade {
+              animation: fade 1.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}

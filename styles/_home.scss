@@ -1,0 +1,118 @@
+section#home .title-container {
+  background-image: url("../src/title-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  box-shadow: inset 0 0 0 1000px  rgba(116, 95, 234, 0.3);
+  height: 100vh;
+  padding-top: calc(25vh + #{$header-height-desktop});
+  position: relative;
+  overflow: hidden;
+
+  @media screen and (max-width: 1150px){
+    padding-top: calc(7vh + #{$header-height-mobile});
+  }
+
+  @media screen and (max-width: 350px){
+    padding-top: calc(2vh + #{$header-height-mobile});
+  }
+
+  .title {
+    background: linear-gradient(90deg, rgba(116, 95, 234, 0.95) 80%, rgba(0, 0, 0, 0) 100%); 
+    color: white;
+    border-radius: 20px;
+    display: block;
+    width: 75%;
+    padding: 60px 25px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: 670px){
+      width: 90%;
+      margin-bottom: 40px;
+      padding: 40px 15px;
+    }
+
+    @media screen and (max-width: 350px){
+      margin-bottom: 20px;
+    }
+
+    @media screen and (max-height: 650px){
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+
+      @media screen and (max-width: 670px){
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      font-size: 1.5rem;
+
+      @media screen and (max-width: 670px){
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .shortcuts {
+    width: 75%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 670px){
+      width: 90%;
+    }
+
+    a {
+      background: $main-clr;
+      color: white;
+      font-size: 1.8rem;
+      text-decoration: none;
+      filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.25));
+      border-radius: 20px;
+      padding: 10px 80px;
+      margin-right: 80px;
+      transition: 0.25s;
+
+      @media screen and (max-width: 1150px){
+        display: block;
+        margin-right: 0;
+        padding: 10px 25px;
+        width: 40vw;
+
+        &:not(:last-child){
+          margin-bottom: 15px;
+        }
+      }
+
+      @media screen and (max-width: 670px){
+        font-size: 1.5rem;
+      }
+
+      @media screen and (max-height: 650px){
+        visibility: hidden;
+      }
+
+      &:hover {
+        color: $main-clr;
+        background: white;
+      }
+    }
+
+    a.sc-contact {
+      background: white;
+      color: $main-clr;
+
+      &:hover {
+        color: white;
+        background: $main-clr;
+      }
+    }
+  }
+}
